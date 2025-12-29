@@ -1,7 +1,7 @@
 # Frontline AI Copilot (Voice-Aware Guardrails & Escalation)
 
 A backend judgment and escalation layer for bank AI systems, focused on safety, compliance, and voice-aware human handoff.
-=======
+
 
 A backend judgment and escalation layer for bank AI systems, focused on safety, compliance, and voice-aware human handoff.
 
@@ -48,7 +48,6 @@ This demo focuses on **logic, safety, and realism**.
 ## Design Philosophy
 
 This project intentionally avoids:
-<<<<<<< HEAD
 
 - LLM APIs
 - speech-to-text or telephony integrations
@@ -57,13 +56,11 @@ This project intentionally avoids:
 The goal is to showcase decision logic, safety guardrails, escalation behavior, and explainability in a bank-facing AI system.
 
 AI here guides humans. it does not replace them.
-=======
 -LLM APIs
 -speech-to-text or telephony integrations
 -cloud infrastructure or databases
 -The goal is to showcase decision logic, safety guardrails, escalation behavior, and explainability in a bank-facing AI system.
 -AI here guides humans; it does not replace them.
->>>>>>> 8ae99fb (Add screenshots and update README links)
 
 ---
 
@@ -101,13 +98,9 @@ app/
 
 ---
 
-<<<<<<< HEAD
 ## Run locally
 
 ### 1) Install dependancies
-
-=======
-
 
 
 
@@ -120,7 +113,6 @@ pip install -r requirements.txt
 
 ### 2) Start server
 
-<<<<<<< HEAD
 ```bash
 uvicorn app.main:app --reload
 ```
@@ -134,7 +126,6 @@ http://127.0.0.1:8000/docs
 ---
 
 ## API
-=======
 
 **POST** `/copilot/respond`
 
@@ -148,9 +139,7 @@ http://127.0.0.1:8000/docs
 }
 ```
 
-<<<<<<< HEAD
 ### Response includes
-=======
 Response includes:
 -answer
 -suggested_action
@@ -174,7 +163,6 @@ Response includes:
 * policy_name
 * policy_snippet
 
-<<<<<<< HEAD
 ---
 
 ## Example Scenarios
@@ -198,7 +186,6 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 
 
 **Behavior:**
-=======
 Behavior:
 - Detects high risk
 - Escalates to fraud handling
@@ -233,7 +220,6 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 ### 3) Voice Distress → Early Escalation + Voice Guidance
 
 ```bash
-=======
 Behavior:
 -Blocks unsafe instruction
 -Forces escalation to supervisor/security
@@ -248,7 +234,6 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 
 
 **Behavior:**
-=======
 Behavior:
 - Escalates even if risk is LOW
 - Returns voice-specific de-escalation guidance

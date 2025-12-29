@@ -248,4 +248,3 @@ Behavior:
 
 Built by **Mohammad Jafar**.
 
-* Escalates even if risk is LOW

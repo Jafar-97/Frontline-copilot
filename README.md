@@ -72,7 +72,7 @@ AI here guides humans. it does not replace them.
 
 ---
 
-## Folder structure (high level)
+## Folder structure
 
 ```text
 app/

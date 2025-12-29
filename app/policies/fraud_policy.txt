@@ -1,0 +1,5 @@
+POLICY: Fraud / Unauthorized Activity
+- Verify customer identity using approved verification steps.
+- If unauthorized transactions are reported, escalate to Fraud Operations.
+- Take immediate steps to secure the account (freeze card / secure access).
+- Do not promise refunds; confirm investigation process and timelines per policy.

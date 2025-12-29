@@ -1,0 +1,5 @@
+POLICY: Disputes / Chargeback Intake
+- Collect transaction details (date, amount, merchant, reason).
+- Start dispute intake workflow and provide next steps.
+- Do not share internal thresholds or risk rules with customers.
+- Escalate if the customer reports fraud or identity theft indicators.

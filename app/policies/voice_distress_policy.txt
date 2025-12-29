@@ -1,0 +1,5 @@
+POLICY: Voice Distress / Sensitive Calls
+- Use calm, reassuring tone and acknowledge emotion.
+- Ask one question at a time; avoid jargon.
+- If customer is distressed/angry, escalate earlier to supervisor if needed.
+- Focus on immediate safety steps first (secure account, confirm identity).

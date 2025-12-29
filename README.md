@@ -1,6 +1,12 @@
 # Frontline AI Copilot (Voice-Aware Guardrails & Escalation)
+<<<<<<< HEAD
 
 A backend judgment and escalation layer for bank AI systems, focused on safety, compliance, and voice-aware human handoff.
+=======
+
+A backend judgment and escalation layer for bank AI systems, focused on safety, compliance, and voice-aware human handoff.
+
+>>>>>>> 8ae99fb (Add screenshots and update README links)
 
 This is **not** a customer-facing chatbot. It helps frontline staff decide:
 - when AI can safely assist
@@ -44,6 +50,7 @@ This demo focuses on **logic, safety, and realism**.
 ## Design Philosophy
 
 This project intentionally avoids:
+<<<<<<< HEAD
 
 - LLM APIs
 - speech-to-text or telephony integrations
@@ -52,6 +59,13 @@ This project intentionally avoids:
 The goal is to showcase decision logic, safety guardrails, escalation behavior, and explainability in a bank-facing AI system.
 
 AI here guides humans. it does not replace them.
+=======
+-LLM APIs
+-speech-to-text or telephony integrations
+-cloud infrastructure or databases
+-The goal is to showcase decision logic, safety guardrails, escalation behavior, and explainability in a bank-facing AI system.
+-AI here guides humans; it does not replace them.
+>>>>>>> 8ae99fb (Add screenshots and update README links)
 
 ---
 
@@ -89,16 +103,27 @@ app/
 
 ---
 
+<<<<<<< HEAD
 ## Run locally
 
 ### 1) Install dependancies
 
+=======
+
+
+
+
+## Run Locally
+
+### 1) Install dependencies
+>>>>>>> 8ae99fb (Add screenshots and update README links)
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 2) Start server
 
+<<<<<<< HEAD
 ```bash
 uvicorn app.main:app --reload
 ```
@@ -112,6 +137,8 @@ http://127.0.0.1:8000/docs
 ---
 
 ## API
+=======
+>>>>>>> 8ae99fb (Add screenshots and update README links)
 
 **POST** `/copilot/respond`
 
@@ -125,7 +152,21 @@ http://127.0.0.1:8000/docs
 }
 ```
 
+<<<<<<< HEAD
 ### Response includes
+=======
+Response includes:
+-answer
+-suggested_action
+-risk_level
+-escalation_required
+-guardrail_triggered
+-reasoning
+-follow_up_question
+-voice_guidance
+-policy_name
+-policy_snippet
+>>>>>>> 8ae99fb (Add screenshots and update README links)
 
 * answer
 * suggested_action
@@ -138,6 +179,7 @@ http://127.0.0.1:8000/docs
 * policy_name
 * policy_snippet
 
+<<<<<<< HEAD
 ---
 
 ## Example Scenarios
@@ -145,14 +187,34 @@ http://127.0.0.1:8000/docs
 ### 1) Fraud → Escalation + Policy Citation
 
 ```bash
+=======
+##Example Scenarios:
+
+The following scenarios demonstrate how the copilot prioritizes safety, explainability, and early human escalation in realistic banking workflows.
+
+
+1) Fraud → Escalation + Policy Citation
+
+>>>>>>> 8ae99fb (Add screenshots and update README links)
 curl -X POST "http://127.0.0.1:8000/copilot/respond" \
   -H "Content-Type: application/json" \
   -d '{"employee_message":"Customer reports unauthorized transactions","context_id":"ctx-101","channel":"chat"}'
 ```
 ![Fraud escalation example](screenshots/fraud_escalation.png)
 
+<<<<<<< HEAD
 
 **Behavior:**
+=======
+Behavior:
+- Detects high risk
+- Escalates to fraud handling
+- Returns fraud_policy.txt citation
+
+**Example output:**
+
+[Fraud escalation example](screenshots/fraud_escalation.png)
+
 
 * Detects high risk
 * Escalates to fraud handling
@@ -170,6 +232,7 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 
 **Behavior:**
 
+<<<<<<< HEAD
 * Blocks unsafe instruction
 * Forces escalation to supervisor/security
 
@@ -178,14 +241,37 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 ### 3) Voice Distress → Early Escalation + Voice Guidance
 
 ```bash
+=======
+Behavior:
+-Blocks unsafe instruction
+-Forces escalation to supervisor/security
+
+3) Voice Distress → Early Escalation + Voice Guidance
+
 curl -X POST "http://127.0.0.1:8000/copilot/respond" \
   -H "Content-Type: application/json" \
   -d '{"employee_message":"Customer is crying and panicking, help me right now","context_id":"ctx-301","channel":"voice"}'
 ```
 ![Voice distress escalation example](screenshots/voice_distress.png)
 
+<<<<<<< HEAD
 
 **Behavior:**
+=======
+Behavior:
+- Escalates even if risk is LOW
+- Returns voice-specific de-escalation guidance
+- Cites voice distress policy
+
+**Example output:**
+
+![Voice distress handling example](screenshots/voice_distress.png)
+
+
+## Credits
+
+Built by **Mohammad Jafar**.
+>>>>>>> 8ae99fb (Add screenshots and update README links)
 
 * Escalates even if risk is LOW
 * Returns voice-specific de-escalation guidance

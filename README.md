@@ -166,14 +166,14 @@ Response includes:
 ---
 
 ## Example Scenarios
+The following scenarios demonstrate how the copilot prioritizes safety, explainability, and early human escalation in realistic banking workflows.
 
 ### 1) Fraud → Escalation + Policy Citation
 
 ```bash
-=======
+
 ##Example Scenarios:
 
-The following scenarios demonstrate how the copilot prioritizes safety, explainability, and early human escalation in realistic banking workflows.
 
 
 1) Fraud → Escalation + Policy Citation

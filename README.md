@@ -1,12 +1,10 @@
 # Frontline AI Copilot (Voice-Aware Guardrails & Escalation)
-<<<<<<< HEAD
 
 A backend judgment and escalation layer for bank AI systems, focused on safety, compliance, and voice-aware human handoff.
 =======
 
 A backend judgment and escalation layer for bank AI systems, focused on safety, compliance, and voice-aware human handoff.
 
->>>>>>> 8ae99fb (Add screenshots and update README links)
 
 This is **not** a customer-facing chatbot. It helps frontline staff decide:
 - when AI can safely assist
@@ -116,7 +114,6 @@ app/
 ## Run Locally
 
 ### 1) Install dependencies
->>>>>>> 8ae99fb (Add screenshots and update README links)
 ```bash
 pip install -r requirements.txt
 ```
@@ -138,7 +135,6 @@ http://127.0.0.1:8000/docs
 
 ## API
 =======
->>>>>>> 8ae99fb (Add screenshots and update README links)
 
 **POST** `/copilot/respond`
 
@@ -166,7 +162,6 @@ Response includes:
 -voice_guidance
 -policy_name
 -policy_snippet
->>>>>>> 8ae99fb (Add screenshots and update README links)
 
 * answer
 * suggested_action
@@ -195,14 +190,12 @@ The following scenarios demonstrate how the copilot prioritizes safety, explaina
 
 1) Fraud → Escalation + Policy Citation
 
->>>>>>> 8ae99fb (Add screenshots and update README links)
 curl -X POST "http://127.0.0.1:8000/copilot/respond" \
   -H "Content-Type: application/json" \
   -d '{"employee_message":"Customer reports unauthorized transactions","context_id":"ctx-101","channel":"chat"}'
 ```
 ![Fraud escalation example](screenshots/fraud_escalation.png)
 
-<<<<<<< HEAD
 
 **Behavior:**
 =======
@@ -232,7 +225,6 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 
 **Behavior:**
 
-<<<<<<< HEAD
 * Blocks unsafe instruction
 * Forces escalation to supervisor/security
 
@@ -254,7 +246,6 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 ```
 ![Voice distress escalation example](screenshots/voice_distress.png)
 
-<<<<<<< HEAD
 
 **Behavior:**
 =======
@@ -271,24 +262,5 @@ Behavior:
 ## Credits
 
 Built by **Mohammad Jafar**.
->>>>>>> 8ae99fb (Add screenshots and update README links)
 
 * Escalates even if risk is LOW
-* Returns voice-specific de-escalation guidance
-* Cites voice distress policy
-
-```
-
----
-
-If you paste **this exactly** into your `README.md`, GitHub will render it clean, structured, and professional.
-
-If you want next:
-- badges
-- collapsible sections
-- screenshots placed perfectly
-- “Demo Flow” section
-- recruiter-grade polish
-
-Just say the word.
-```

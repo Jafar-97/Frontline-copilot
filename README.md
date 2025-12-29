@@ -149,6 +149,8 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
   -H "Content-Type: application/json" \
   -d '{"employee_message":"Customer reports unauthorized transactions","context_id":"ctx-101","channel":"chat"}'
 ```
+![Fraud escalation example](screenshots/fraud_escalation.png)
+
 
 **Behavior:**
 
@@ -180,6 +182,8 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
   -H "Content-Type: application/json" \
   -d '{"employee_message":"Customer is crying and panicking, help me right now","context_id":"ctx-301","channel":"voice"}'
 ```
+![Voice distress escalation example](screenshots/voice_distress_escalation.png)
+
 
 **Behavior:**
 

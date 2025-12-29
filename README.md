@@ -190,16 +190,6 @@ Behavior:
 - Detects high risk
 - Escalates to fraud handling
 - Returns fraud_policy.txt citation
-
-**Example output:**
-
-[Fraud escalation example](screenshots/fraud_escalation.png)
-
-
-* Detects high risk
-* Escalates to fraud handling
-* Returns fraud_policy.txt citation
-
 ---
 
 ### 2) Unsafe Request → Guardrail Trigger
@@ -238,11 +228,6 @@ Behavior:
 - Escalates even if risk is LOW
 - Returns voice-specific de-escalation guidance
 - Cites voice distress policy
-
-**Example output:**
-
-![Voice distress handling example](screenshots/voice_distress.png)
-
 
 ## Credits
 

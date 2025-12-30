@@ -54,12 +54,6 @@ This project intentionally avoids:
 The goal is to showcase decision logic, safety guardrails, escalation behavior, and explainability in a bank-facing AI system.
 
 AI here guides humans. it does not replace them.
--LLM APIs
--speech-to-text or telephony integrations
--cloud infrastructure or databases
--The goal is to showcase decision logic, safety guardrails, escalation behavior, and explainability in a bank-facing AI system.
--AI here guides humans; it does not replace them.
-
 ---
 
 ## Tech Stack
@@ -95,10 +89,6 @@ app/
 ````
 
 ---
-
-## Run locally
-
-### 1) Install dependancies
 
 
 
@@ -138,17 +128,7 @@ http://127.0.0.1:8000/docs
 ```
 
 ### Response includes
-Response includes:
--answer
--suggested_action
--risk_level
--escalation_required
--guardrail_triggered
--reasoning
--follow_up_question
--voice_guidance
--policy_name
--policy_snippet
+
 
 * answer
 * suggested_action
@@ -170,11 +150,8 @@ The following scenarios demonstrate how the copilot prioritizes safety, explaina
 
 ```bash
 
-##Example Scenarios:
 
 
-
-1) Fraud → Escalation + Policy Citation
 
 curl -X POST "http://127.0.0.1:8000/copilot/respond" \
   -H "Content-Type: application/json" \
@@ -184,7 +161,6 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 
 
 **Behavior:**
-Behavior:
 - Detects high risk
 - Escalates to fraud handling
 - Returns fraud_policy.txt citation
@@ -208,9 +184,6 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 ### 3) Voice Distress → Early Escalation + Voice Guidance
 
 ```bash
-Behavior:
--Blocks unsafe instruction
--Forces escalation to supervisor/security
 
 3) Voice Distress → Early Escalation + Voice Guidance
 
@@ -222,12 +195,23 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 
 
 **Behavior:**
-Behavior:
 - Escalates even if risk is LOW
 - Returns voice-specific de-escalation guidance
 - Cites voice distress policy
 
-## Credits
+## Conclusion
 
-Built by **Mohammad Jafar**.
+This project demonstrates how AI systems in banking should prioritize **judgment, safety, and timely human escalation** over response generation.
 
+Rather than focusing on model outputs or UI, the copilot is intentionally designed as a **control and decision layer** one that determines when AI can assist, when it must stop, and when a human should take over, particularly in sensitive voice-based interactions.
+
+The architecture mirrors how such logic would exist in production environments: upstream of LLMs, policy-aware, explainable, and deterministic. While simplified for demonstration purposes, the patterns shown here reflect real-world constraints in regulated financial systems.
+
+This work reflects my interest in building **responsible, production-minded AI systems** that support frontline teams while maintaining safety and compliance.
+
+---
+
+### Author
+
+**Jafar Mohammad**  
+Email: `jafarshariffai@gmail.com`

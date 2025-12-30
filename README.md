@@ -143,6 +143,34 @@ http://127.0.0.1:8000/docs
 
 ---
 
+## What a Frontline Agent Actually Sees
+
+This copilot is designed for frontline bank agents handling real customers under pressure 
+not for end customers.
+
+Below is an example of how the system assists an agent during a live interaction.
+
+### Example: Debit Card Fraud (Voice Call)
+
+Customer (voice → text):
+"I think someone used my debit card. I'm really worried."
+
+Copilot Output:
+- Decision: ESCALATE TO HUMAN
+- Risk Level: HIGH
+- Triggered Signals: fraud keywords, emotional distress
+- Policy Applied: Unauthorized Transactions Policy
+
+Agent Guidance:
+- Reassure the customer calmly
+- Freeze the card immediately
+- Verify recent transactions
+- Route the case to a fraud specialist if needed
+
+The agent does not need to decide what to do next 
+the copilot provides **clear, policy-backed guidance** in real time.
+
+
 ## Example Scenarios
 The following scenarios demonstrate how the copilot prioritizes safety, explainability, and early human escalation in realistic banking workflows.
 
@@ -199,13 +227,14 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 
 ## Conclusion
 
-This project demonstrates how AI systems in banking should prioritize **judgment, safety, and timely human escalation** over response generation.
+This project demonstrates how banking AI systems should prioritize **judgment, safety, and timely human escalation** over simply generating responses.
 
-Rather than focusing on model outputs or UI, the copilot is intentionally designed as a **control and decision layer** one that determines when AI can assist, when it must stop, and when a human should take over, particularly in sensitive voice-based interactions.
+Rather than acting as a chatbot, the Frontline AI Copilot functions as a **decision and control layer** — determining when AI can assist, when it must stop, and when a human agent should take over. This is especially critical in fraud cases, compliance-sensitive requests, and emotionally charged voice interactions.
 
-The architecture mirrors how such logic would exist in production environments: upstream of LLMs, policy-aware, explainable, and deterministic. While simplified for demonstration purposes, the patterns shown here reflect real-world constraints in regulated financial systems.
+The system is intentionally rules-based and explainable, reflecting how real banking environments value **determinism, auditability, and policy alignment** over opaque intelligence. While simplified for demonstration, the architecture mirrors how such logic would exist upstream of LLMs in production systems.
 
-This work reflects my interest in building **responsible, production-minded AI systems** that support frontline teams while maintaining safety and compliance.
+Overall, this project reflects my interest in building **responsible, production-minded AI systems** that support frontline teams, reduce operational risk, and reinforce trust in regulated financial environments.
+
 
 ---
 

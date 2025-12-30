@@ -3,8 +3,6 @@
 A backend judgment and escalation layer for bank AI systems, focused on safety, compliance, and voice-aware human handoff.
 
 
-A backend judgment and escalation layer for bank AI systems, focused on safety, compliance, and voice-aware human handoff.
-
 
 This is **not** a customer-facing chatbot. It helps frontline staff decide:
 - when AI can safely assist

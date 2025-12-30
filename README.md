@@ -185,8 +185,6 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 
 ```bash
 
-3) Voice Distress → Early Escalation + Voice Guidance
-
 curl -X POST "http://127.0.0.1:8000/copilot/respond" \
   -H "Content-Type: application/json" \
   -d '{"employee_message":"Customer is crying and panicking, help me right now","context_id":"ctx-301","channel":"voice"}'

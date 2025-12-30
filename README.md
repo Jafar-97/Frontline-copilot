@@ -229,7 +229,7 @@ curl -X POST "http://127.0.0.1:8000/copilot/respond" \
 
 This project demonstrates how banking AI systems should prioritize **judgment, safety, and timely human escalation** over simply generating responses.
 
-Rather than acting as a chatbot, the Frontline AI Copilot functions as a **decision and control layer** — determining when AI can assist, when it must stop, and when a human agent should take over. This is especially critical in fraud cases, compliance-sensitive requests, and emotionally charged voice interactions.
+Rather than acting as a chatbot, the Frontline AI Copilot functions as a **decision and control layer** determining when AI can assist, when it must stop, and when a human agent should take over. This is especially critical in fraud cases, compliance-sensitive requests, and emotionally charged voice interactions.
 
 The system is intentionally rules-based and explainable, reflecting how real banking environments value **determinism, auditability, and policy alignment** over opaque intelligence. While simplified for demonstration, the architecture mirrors how such logic would exist upstream of LLMs in production systems.
 
